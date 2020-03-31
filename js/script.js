@@ -3,7 +3,7 @@ $(document).ready(function(){
     
 
 
-    $("form").submit(function(event){
+    $("#form").submit(function(event){
         event.preventDefault();
         var input = ($("#input").val());
         var newSentence = input.split("");
@@ -20,11 +20,13 @@ $(document).ready(function(){
             }
 
         })
+        
+        console.log(finalSentence.join(""));
 
-        console.log(finalSentence);
-        finalSentence.forEach(function(finalFinalSentence){
-           $(finalFinalSentence).text("#result");
-        })
+        $("#result").text(finalSentence.join(""));
+        // finalSentence.forEach(function(finalFinalSentence){
+        //     // $("<p>" + finalFinalSentence + "</p>").appendTo("#result");
+        // })
 
 
 
